@@ -1,1 +1,13 @@
+#load libraries
 
+#Client Function - predicts next 7 days after given date
+clientForecast <- function(ts_data, date) {
+
+#model based on given data
+
+#point estimate
+
+#confidence interval
+
+return(point_est, conf_int)
+}
