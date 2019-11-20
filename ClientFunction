@@ -1,13 +1,26 @@
-#load libraries
+#load libraries:
+library(astsa)
+library(quantmod)
+library(simts)
 
-#Client Function - predicts next 7 days after given date
+#Create a function for a client to predict next 7 days
 clientForecast <- function(ts_data, date) {
+  if (date = NA | "") {
+    date = Sys.Date()
+  }
+  
+  #model based on data
+  ts = gts(as.vector(ts_data), start = date+as.date(1), end=date+as.date(7), freq = 1)
+  
 
-#model based on given data
-
-#point estimate
-
-#confidence interval
-
-return(point_est, conf_int)
+  #point forecast based on model
+  n = 1:7
+  
+  #point_forecast = 
+  
+  #95% confidence interval based on model
+  #conf_int = 
+  
+  return(point_forecast, conf_int)
 }
+
